@@ -44,10 +44,10 @@ jobs:
 
       - name: Copy README.md
         run: |
-          mkdir insane-mc
-          mkdir insane-mc/assets
-          cp node_modules/insane-mc/README.md insane-mc/README.md -f
-          cp node_modules/insane-mc/assets/logo.png insane-mc/assets/logo.png -f
+          mkdir intro/insane-mc
+          mkdir intro/insane-mc/assets
+          cp node_modules/insane-mc/README.md intro/insane-mc/README.md -f
+          cp node_modules/insane-mc/assets/logo.png intro/insane-mc/assets/logo.png -f
 
       - name: Build
         run: yarn build

@@ -30,10 +30,18 @@ export default defineUserConfig({
 			'/intro/': [{
 				text: '快速上手',
 				link: '/intro/',
-			},{
-				text: 'README.md',
-				link: '/insane-mc/',
+			}, {
+				text: 'README.md (English)',
+				link: '/intro/insane-mc/',
 			}],
+
+			'/api/': [
+
+			],
+
+			'/syntax/': [
+
+			],
 		}
 	}),
 
