@@ -8,7 +8,7 @@ export default defineUserConfig({
 	description: '疯狂的 Minecraft 数据包构建工具',
 
 	base: '/',
-	public: `${sourceDir}/assets`,
+	public: `${sourceDir}/.vuepress/assets`,
 
 	theme: defaultTheme({
 		logo: '/logo.png',
