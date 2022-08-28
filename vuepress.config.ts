@@ -13,34 +13,29 @@ export default defineUserConfig({
 	theme: defaultTheme({
 		logo: '/logo.png',
 
-		repo: 'insane-mc/docs',
+		repo: 'insane-mc/imc',
+		docsRepo: 'insane-mc/docs',
 
-		navbar: [{
-			text: '指南',
-			link: '/intro/',
-		}, {
-			text: '语法',
-			link: '/syntax/',
-		}, {
-			text: 'API',
-			link: '/api/',
-		}],
+		lastUpdatedText: '上次更新',		
+		contributorsText: '贡献者',
+		editLinkText: '帮助我们改善此页面',
+
+		navbar: [
+			{ text: '指南', link: '/intro/' },
+			{ text: '语法', link: '/syntax/' },
+			{ text: 'API', link: '/api/' }
+		],
 
 		sidebar: {
-			'/intro/': [{
-				text: '快速上手',
-				link: '/intro/',
-			}, {
-				text: 'README.md (English)',
-				link: '/intro/insane-mc/',
-			}],
+			'/intro/': [
+				{ text: '快速上手', link: '/intro/' },
+				{ text: 'README.md (English)', link: '/intro/insane-mc/' }
+			],
 
 			'/api/': [
-
 			],
 
 			'/syntax/': [
-
 			],
 		}
 	}),
