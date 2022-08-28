@@ -21,15 +21,15 @@ export default defineUserConfig({
 		editLinkText: '帮助我们改善此页面',
 
 		navbar: [
-			{ text: '指南', link: '/intro/' },
-			{ text: '语法', link: '/syntax/' },
-			{ text: 'API', link: '/api/' }
+			{ text: '上手指南', link: '/intro/' },
+			{ text: 'IMC Lang 语法', link: '/syntax/' },
+			{ text: 'IMC API', link: '/api/' }
 		],
 
 		sidebar: {
 			'/intro/': [
 				{ text: '快速上手', link: '/intro/' },
-				{ text: 'README.md (English)', link: '/intro/insane-mc/' }
+				{ text: 'README.md (English only)', link: '/intro/insane-mc/' }
 			],
 
 			'/api/': [
