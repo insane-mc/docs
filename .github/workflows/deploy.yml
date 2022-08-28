@@ -39,6 +39,12 @@ jobs:
       - name: Install
         run: yarn
 
+      - name: Upgrade Core Package
+        run: yarn upgrade insane-mc
+
+      - name: Copy README.md
+        run: mkdir insane-mc && cp node_modules/insane-mc/README.md insane-mc/README.md -f
+
       - name: Build
         run: yarn build
 

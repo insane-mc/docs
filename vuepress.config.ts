@@ -12,15 +12,29 @@ export default defineUserConfig({
 
 	theme: defaultTheme({
 		logo: '/logo.png',
+
+		repo: 'insane-mc/docs',
+
 		navbar: [{
-			text: '首页',
-			link: '/',
-		}, {
-			text: 'API',
-			link: '/api/',
+			text: '指南',
+			link: '/intro/',
 		}, {
 			text: '语法',
 			link: '/syntax/',
+		}, {
+			text: 'API',
+			link: '/api/',
 		}],
+
+		sidebar: {
+			'/intro/': [{
+				text: '快速上手',
+				link: '/intro/',
+			},{
+				text: 'README.md',
+				link: '/insane-mc/',
+			}],
+		}
 	}),
+
 })
