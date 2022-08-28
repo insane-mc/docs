@@ -1,17 +1,32 @@
-import { defaultTheme, defineUserConfig } from 'vuepress'
+import fs from 'fs'
+import path from 'path'
+import frontmatter from 'frontmatter'
+import { SidebarItem, defaultTheme, defineUserConfig } from 'vuepress'
 
 const sourceDir = __dirname
+
+function generateSidebarFrom(dir: string): Array<SidebarItem> {
+	return fs.readdirSync(dir, { withFileTypes: true })
+		.filter(item => item.isDirectory() && fs.existsSync(path.join(dir, item.name, 'README.md')))
+		.map(item => {
+			const data: any = frontmatter(fs.readFileSync(path.join(dir, item.name, 'README.md')).toString())?.data || {}
+			return {
+				text: data.title || item.name,
+				link: '/' + path.relative(__dirname, path.join(dir, item.name)).replace(/\\/g, '/'),
+			}
+		})
+}
 
 export default defineUserConfig({
 	lang: 'zh-CN',
 	title: 'InsaneMC',
 	description: '疯狂的 Minecraft 数据包构建工具',
 
-  head: [
-    ['link', { rel: "shortcut icon", href: "/logo.png"}],
-    ['meta', { name: "msapplication-TileColor", content: "#3eaf7c"}],
-    ['meta', { name: "theme-color", content: "#ffffff"}],
-  ],
+	head: [
+		['link', { rel: "shortcut icon", href: "/logo.png" }],
+		['meta', { name: "msapplication-TileColor", content: "#3eaf7c" }],
+		['meta', { name: "theme-color", content: "#ffffff" }],
+	],
 
 	base: '/',
 	public: `${sourceDir}/.vuepress/assets`,
@@ -22,14 +37,15 @@ export default defineUserConfig({
 		repo: 'insane-mc/imc',
 		docsRepo: 'insane-mc/docs',
 
+		contributors: false,
 		lastUpdatedText: '上次更新',
-		contributorsText: '贡献者',
 		editLinkText: '帮助我们改善此页面',
 
 		navbar: [
 			{ text: '入门指南', link: '/intro/' },
 			{ text: 'API 文档', link: '/api/' },
-			{ text: 'IMCL 语法', link: '/syntax/' },
+			{ text: 'IMCL 文档', link: '/imcl/' },
+			{ text: '官方实践', link: '/packages/' },
 		],
 
 		sidebar: {
@@ -39,9 +55,18 @@ export default defineUserConfig({
 			],
 
 			'/api/': [
+				{ text: 'API 文档', link: '/api/' },
+				...generateSidebarFrom(path.join(__dirname, 'api')),
 			],
 
-			'/syntax/': [
+			'/imcl/': [
+				{ text: 'IMCL 文档', link: '/imcl/' },
+				...generateSidebarFrom(path.join(__dirname, 'imcl')),
+			],
+
+			'/packages/': [
+				{ text: '官方实践', link: '/packages/' },
+				...generateSidebarFrom(path.join(__dirname, 'packages')),
 			],
 		}
 	}),

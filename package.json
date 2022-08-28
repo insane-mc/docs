@@ -13,6 +13,7 @@
     "vuepress": "^2.0.0-beta.50"
   },
   "dependencies": {
+    "frontmatter": "^0.0.3",
     "insane-mc": "^0.2.0"
   }
 }
