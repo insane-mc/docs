@@ -14,6 +14,6 @@
   },
   "dependencies": {
     "frontmatter": "^0.0.3",
-    "insane-mc": "^0.2.0"
+    "insane-mc": "^0.3.0"
   }
 }

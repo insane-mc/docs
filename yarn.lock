@@ -1177,10 +1177,10 @@ inherits@^2.0.3, inherits@^2.0.4:
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.4.tgz#0fa2c64f932917c3433a0ded55363aae37416b7c"
   integrity sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
 
-insane-mc@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/insane-mc/-/insane-mc-0.2.0.tgz#b32d1fbe2d7b6312dbe2e2f664896c237cd023c1"
-  integrity sha512-CBV1XnyCFr3kRp0DfkYBT2CmvaP4h2V8a7dD5xFKrzhEnknE8mfJgERwsXegTq0Zy2/NyWfBZ3b9jCz2WxSZBw==
+insane-mc@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/insane-mc/-/insane-mc-0.3.0.tgz#7ce2d9502d4de474823c275cb734f76743324c37"
+  integrity sha512-rOcBI52r3V9msIYmNQ9cdVL0W4s3Fc3zeSRrMGQDf8kQZ9Wy30DCC7ORHxQmMQ1goj9T7jaV6HYrgTYTA8BjCA==
   dependencies:
     "@types/lodash" "^4.14.184"
     "@types/node" "^18.7.11"
