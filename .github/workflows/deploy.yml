@@ -51,9 +51,9 @@ jobs:
           cp node_modules/insane-mc/README.md intro/readme-en/README.md -f
           cp node_modules/insane-mc/assets/logo.png intro/readme-en/assets/logo.png -f
 
-      - name: Copy README.md of Offical Packages
-        run: |
-          cp node_modules/insane-mc/packages/* packages -f -r
+      # - name: Copy README.md of Offical Packages
+      #   run: |
+      #     cp node_modules/insane-mc/packages/* packages -f -r
 
       - name: Build
         run: yarn build
