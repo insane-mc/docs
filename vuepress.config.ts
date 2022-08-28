@@ -7,11 +7,17 @@ export default defineUserConfig({
 	title: 'InsaneMC',
 	description: '疯狂的 Minecraft 数据包构建工具',
 
+  head: [
+    ['link', { rel: "shortcut icon", href: "/logo.png"}],
+    ['meta', { name: "msapplication-TileColor", content: "#3eaf7c"}],
+    ['meta', { name: "theme-color", content: "#ffffff"}],
+  ],
+
 	base: '/',
 	public: `${sourceDir}/.vuepress/assets`,
 
 	theme: defaultTheme({
-		logo: '/logo.png',
+		// logo: '/avatar.png',
 
 		repo: 'insane-mc/imc',
 		docsRepo: 'insane-mc/docs',
