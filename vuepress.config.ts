@@ -21,9 +21,9 @@ export default defineUserConfig({
 		editLinkText: '帮助我们改善此页面',
 
 		navbar: [
-			{ text: '上手指南', link: '/intro/' },
-			{ text: 'IMC Lang 语法', link: '/syntax/' },
-			{ text: 'IMC API', link: '/api/' }
+			{ text: '入门指南', link: '/intro/' },
+			{ text: 'API 文档', link: '/api/' },
+			{ text: 'IMCL 语法', link: '/syntax/' },
 		],
 
 		sidebar: {
