@@ -16,7 +16,7 @@ export default defineUserConfig({
 		repo: 'insane-mc/imc',
 		docsRepo: 'insane-mc/docs',
 
-		lastUpdatedText: '上次更新',		
+		lastUpdatedText: '上次更新',
 		contributorsText: '贡献者',
 		editLinkText: '帮助我们改善此页面',
 
@@ -29,7 +29,7 @@ export default defineUserConfig({
 		sidebar: {
 			'/intro/': [
 				{ text: '快速上手', link: '/intro/' },
-				{ text: 'README.md (English only)', link: '/intro/insane-mc/' }
+				{ text: 'README.md (English)', link: '/intro/readme-en/' }
 			],
 
 			'/api/': [
