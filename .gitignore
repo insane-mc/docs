@@ -1,3 +1,7 @@
+.temp
+.cache
+node_modules
+
 # Logs
 logs
 *.log
