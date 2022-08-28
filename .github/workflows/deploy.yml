@@ -43,7 +43,7 @@ jobs:
         run: yarn upgrade insane-mc
 
       - name: Copy README.md
-        run: >-
+        run: |
           mkdir insane-mc
           mkdir insane-mc/assets
           cp node_modules/insane-mc/README.md insane-mc/README.md -f
