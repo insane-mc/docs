@@ -43,13 +43,20 @@ jobs:
 
       - name: Upgrade Core Package
         run: yarn upgrade insane-mc
+      
+      - name: Clone Core Repo
+        uses: actions/checkout@v3
+        with:
+          repository: insane-mc/imc
+          path: core-repo
 
-      - name: Copy README.md
+      - name: Copy Docs from Core Repo
         run: |
           mkdir intro/readme-en
           mkdir intro/readme-en/assets
-          cp node_modules/insane-mc/README.md intro/readme-en/README.md -f
-          cp node_modules/insane-mc/assets/logo.png intro/readme-en/assets/logo.png -f
+          cp core-repo/README.md intro/readme-en/README.md -f
+          cp core-repo/assets/logo.png intro/readme-en/assets/logo.png -f
+          cp core-repo/packages/* packages -r -f
 
       # - name: Copy README.md of Offical Packages
       #   run: |
