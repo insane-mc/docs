@@ -68,7 +68,7 @@ export default defineUserConfig({
 				{ text: '官方实践', link: '/packages/' },
 				...generateSidebarFrom(path.join(__dirname, 'packages')),
 			],
-		}
+		},
 	}),
 
 })
