@@ -12,7 +12,7 @@ function generateSidebarFrom(dir: string): Array<SidebarItem> {
 			const data: any = frontmatter(fs.readFileSync(path.join(dir, item.name, 'README.md')).toString())?.data || {}
 			return {
 				text: data.title || item.name,
-				link: '/' + path.relative(__dirname, path.join(dir, item.name)).replace(/\\/g, '/'),
+				link: '/' + path.relative(__dirname, path.join(dir, item.name)).replace(/\\/g, '/') + '/',
 			}
 		})
 }
