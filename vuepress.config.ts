@@ -51,7 +51,7 @@ export default defineUserConfig({
 		sidebar: {
 			'/intro/': [
 				{ text: '快速上手', link: '/intro/' },
-				{ text: 'README.md (English)', link: '/intro/readme-en/' }
+				{ text: 'README.md (EN)', link: '/intro/readme-en/' }
 			],
 
 			'/api/': [
